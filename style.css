@@ -1,0 +1,94 @@
+body{
+    background-color: #333;
+
+}
+
+.sarah-effect{
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+    text-transform: uppercase;
+    width: 600px;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    /* top: 80px;
+    left: 360px; */
+    position: relative;
+ 
+}
+
+.sarah-effect .caption,
+.sarah-effect .img, 
+.sarah-effect .overlay{
+    position: absolute;
+}
+
+.sarah-effect .img{
+    transition: .2s;
+}
+
+.sarah-effect .caption h2{
+    margin-top: 45px;
+    margin-left: 45px;
+}
+
+.sarah-effect .overlay{
+    
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+}
+
+.border{
+    height: 2px;
+    width: 0px;
+    background-color: beige;
+    position: absolute;
+    /* opacity: 0; */
+    margin-left: 45px;
+    transition: .2s;
+}
+
+.sarah-effect .caption p{
+    letter-spacing: .2em;
+    margin-left: 45px;
+    margin-top: 40px;
+    opacity: 0;
+
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(250px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*cum se poate de ascuns textul din afara imaginei?*/
+.sarah-effect .caption .thin{
+    font-weight: lighter;
+}
+
+/*--- HOVER EFFECT ---*/
+
+
+.sarah-effect:hover .overlay{
+    background-color: #688ec0aa;
+    transform: translateX(-10px);
+}
+
+
+.sarah-effect:hover .border{
+    width: 510px;
+}
+
+.sarah-effect:hover p{
+    opacity: 1;
+    animation: 1s slide-in-right;
+}
+
+.sarah-effect:hover .img{
+    transform: translateX(-10px);
+}
